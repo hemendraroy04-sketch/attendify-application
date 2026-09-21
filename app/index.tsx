@@ -4,7 +4,16 @@ import { useAuth } from '@/auth';
 
 export default function Index() {
   const { user, ready } = useAuth();
-  if (!ready) return <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}><ActivityIndicator /></View>;
+  if (!ready) return 
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <ActivityIndicator />
+    </View>;
+    
   if (!user) return <Redirect href="/(auth)/login" />;
-  return <Redirect href={user.role === 'TEACHER' ? '/(teacher)/dashboard' : '/(student)/dashboard'} />;
+
+  return <Redirect href={
+    user.role === 'TEACHER' 
+    ? '/(teacher)/dashboard'
+    : '/(student)/dashboard'
+  } />;
 }

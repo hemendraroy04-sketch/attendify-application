@@ -1,7 +1,8 @@
 import { useLocalSearchParams, router } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Alert, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { api } from '@/api';
+import { SafeAreaView } from "react-native-safe-area-context";
 import { startTeacherBeacon, stopTeacherBeacon } from '@/ble';
 
 export default function TeacherClass(){const{id}=useLocalSearchParams<{id:string}>();const[data,setData]=useState<any>(null);const[session,setSession]=useState<any>(null);const[rows,setRows]=useState<any[]>([]);const[busy,setBusy]=useState(false);

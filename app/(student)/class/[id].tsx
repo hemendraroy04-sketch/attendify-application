@@ -1,9 +1,10 @@
 import { useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Alert, Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { Alert, Pressable, StyleSheet, Text, View } from 'react-native';
 import { api } from '@/api';
 import { scanAndMarkAttendance } from '@/attendance';
 import { stopStudentScan } from '@/ble';
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function StudentClass() {
   const { id } = useLocalSearchParams<{ id: string }>();

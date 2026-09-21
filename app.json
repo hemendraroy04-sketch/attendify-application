@@ -12,7 +12,11 @@
       [
         "react-native-bluetooth-ble",
         {
-          "androidBluetoothPermissions": ["scan", "connect", "advertise"]
+          "androidBluetoothPermissions": [
+            "scan",
+            "connect",
+            "advertise"
+          ]
         }
       ]
     ],
@@ -33,6 +37,12 @@
       "infoPlist": {
         "NSBluetoothAlwaysUsageDescription": "Attendify uses Bluetooth to detect nearby classroom attendance sessions.",
         "NSBluetoothPeripheralUsageDescription": "Attendify uses Bluetooth to advertise an active classroom attendance session."
+      }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "eae6e6e3-8666-4f8b-81d4-87123158b398"
       }
     }
   }
