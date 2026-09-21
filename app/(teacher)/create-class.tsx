@@ -39,18 +39,21 @@ export default function CreateClass() {
         <TextInput
           style={s.input}
           placeholder="Class name"
+          placeholderTextColor="#8A8A8A"
           value={name}
           onChangeText={setName}
         />
         <TextInput
           style={s.input}
           placeholder="Subject (optional)"
+          placeholderTextColor="#8A8A8A"
           value={subject}
           onChangeText={setSubject}
         />
         <TextInput
           style={s.input}
           placeholder="Schedule, e.g. Mon/Wed 10:00"
+          placeholderTextColor="#8A8A8A"
           value={schedule}
           onChangeText={setSchedule}
         />
